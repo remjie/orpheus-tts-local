@@ -9,25 +9,34 @@ A lightweight client for running [Orpheus TTS](https://huggingface.co/canopylabs
 - 🔊 Multiple voice options (tara, leah, jess, leo, dan, mia, zac, zoe)
 - 💾 Save audio to WAV files
 
-## Quick Setup
+## Quick Setup (windows)
 
 1. Install [LM Studio](https://lmstudio.ai/) 
 2. Download the [Orpheus TTS model (orpheus-3b-0.1-ft-q4_k_m.gguf)](https://huggingface.co/isaiahbjork/orpheus-3b-0.1-ft-Q4_K_M-GGUF) in LM Studio
+   French : Orpheus TTS model (3b-fr-ft-research_release-Q4_K_M-GGUF)](https://huggingface.co/freddyaboulton/3b-fr-ft-research_release-Q4_K_M-GGUF)
 3. Load the Orpheus model in LM Studio
 4. Start the local server in LM Studio (default: http://127.0.0.1:1234)
 5. Install dependencies:
    ```
-   python3 -m venv venv
-   source venv/bin/activate
+   python -m venv venv
+   venv\bin\activate
    pip install -r requirements.txt
    ```
 6. Run the script:
+   
+   CLI
    ```
    python gguf_orpheus.py --text "Hello, this is a test" --voice tara
+   ```
+   
+   Or GUI
+   ```
+   python gradio_orpheus.py
    ```
 
 ## Usage
 
+CLI
 ```
 python gguf_orpheus.py --text "Your text here" --voice tara --output "output.wav"
 ```

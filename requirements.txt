@@ -2,5 +2,7 @@ torch>=2.0.0
 numpy>=1.20.0
 sounddevice>=0.4.4
 requests>=2.25.0
-wave>=0.0.2 
+# usless in python 3.11
+# wave>=0.0.2
+gradio
 snac>=1.2.1
